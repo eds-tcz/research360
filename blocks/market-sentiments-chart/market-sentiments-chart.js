@@ -12,21 +12,21 @@ export default function decorate(block)
                 const hr = document.createElement('hr');
                 div.parentNode.insertBefore(hr, div.nextSibling); 
 
-                const newRow = document.createElement('div');
-                newRow.classList.add('new-row'); 
+                // const newRow = document.createElement('div');
+                // newRow.classList.add('new-row'); 
 
-                const p1 = document.createElement('p');
-                p1.textContent = 'Value 1'; 
-                const p2 = document.createElement('p');
-                p2.textContent = 'Value 2'; 
-                const p3 = document.createElement('p');
-                p3.textContent = 'Value 3'; 
+                // const p1 = document.createElement('p');
+                // p1.textContent = 'Value 1'; 
+                // const p2 = document.createElement('p');
+                // p2.textContent = 'Value 2'; 
+                // const p3 = document.createElement('p');
+                // p3.textContent = 'Value 3'; 
 
-                newRow.appendChild(p1);
-                newRow.appendChild(p2);
-                newRow.appendChild(p3);
+                // newRow.appendChild(p1);
+                // newRow.appendChild(p2);
+                // newRow.appendChild(p3);
 
-                div.parentNode.insertBefore(newRow, hr.nextSibling); 
+                // div.parentNode.insertBefore(newRow, hr.nextSibling); 
             }
         });
     });
