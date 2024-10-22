@@ -3,7 +3,7 @@ export default function decorate(block) {
     row.classList.add('heading-filters');
     if (r === 0) {
       [...row.children].forEach((div, d) => {
-        if(d === 0){
+        if (d === 0) {
           div.classList.add('filter-ul');
         }
       });
