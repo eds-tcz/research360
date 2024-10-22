@@ -1,14 +1,13 @@
-.nifty50-wrapper
-{
+.nifty50-wrapper {
     width: 90%;
     max-width: 90%;
 }
-.nifty50-container
-{
+
+.nifty50-container {
     padding-top: 20px;
 }
-.nifty-cards
-{
+
+.nifty-cards {
     width: 32%;
     border: 1px solid #ddd !important;
     border-radius: .5rem;
@@ -19,37 +18,39 @@
 
 }
 
-.nifty-cards-1,.nifty-cards-2,.nifty-cards-3
-{
-}
-.nifty50
-{
+.nifty-cards-1,
+.nifty-cards-2,
+.nifty-cards-3 {}
+
+.nifty50 {
     width: 100%;
     justify-content: space-between;
     gap: 16px;
     flex-wrap: wrap;
     display: flex;
 }
+
 .flex-wrapper {
     display: flex;
-    gap: 10px; 
+    gap: 10px;
     align-items: center;
     justify-content: space-between;
 }
 
 .nifty-paragraph-3 {
-    margin-top: 10px; 
+    margin-top: 10px;
 }
-.nifty-paragraph-1
-{
+
+.nifty-paragraph-1 {
     font-size: 16px;
     font-weight: 500;
 }
-.nifty-paragraph-2
-{
+
+.nifty-paragraph-2 {
     color: #999;
     font-size: 12px !important;
 }
+
 .graph-container {
     padding-bottom: 15px;
 
@@ -76,8 +77,8 @@
     color: black !important;
     border-color: #FFA500;
 }
-.time-tab:hover
-{
+
+.time-tab:hover {
     background-color: white;
     color: black !important;
 }
@@ -88,6 +89,7 @@
     position: relative;
     border-radius: 8px;
 }
+
 /* 
 .graph-area::after {
     content: '';
@@ -132,19 +134,11 @@
     font-size: 12px;
 }
 
-/* .graph-container::after {
-    content: '24610.55';
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    color: #ff6b6b;
-    font-size: 12px;
-} */
-
 hr {
     border: none;
     border-top: 1px solid #eee;
 }
+
 .time-labels {
     display: flex;
     justify-content: space-between;
