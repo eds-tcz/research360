@@ -6,8 +6,6 @@
     max-width: 1366px !important;
 }
 
-
-
 .mlow-market-cards{
     display: flex;
   flex-wrap: wrap;
@@ -17,56 +15,54 @@
 }
 
 .image-card {
-    width: 23%;
-    border: 1px solid #ddd !important;
-    border-radius: .5rem;
-    overflow: hidden;
-    padding: 12px !important;
-    margin-bottom: 0rem !important;
-    height: fit-content;
-  }
+  width: 23%;
+  border: 1px solid #ddd !important;
+  border-radius: .5rem;
+  overflow: hidden;
+  padding: 12px !important;
+  margin-bottom: 0 !important;
+  height: fit-content;
+}
 
-  .image-card-image {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #d8d6cf;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 150px;
-    position: relative;
+.image-card-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d8d6cf;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 150px;
+}
 
-  }
+.image-card-image img {
+  width: 100%;
+  display: block;
+}
 
-  .image-card-image img {
-    width: 100%;
-    display: block;
-  }
+.image-card-title {
+  padding-bottom: 0 !important;
+  text-align: left;
+}
 
-  .image-card-title {
-    padding-bottom: 0px !important;
-    text-align: left;
-  }
+.image-card-title p{
+  padding: 8px 0;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 !important;
+  color: #000;
+  line-height: 24px;
+}
 
-  .image-card-title p{
-    padding: 8px 0px;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0px !important;
-    color: #000;
-    line-height: 24px;
-  }
+/* Date section */
+.image-card-date {
+  padding-top: .5rem !important;
+  display: flex;
+  justify-content: space-between !important;
+}
 
-  /* Date section */
-  .image-card-date {
-    padding-top: .5rem !important;
-    display: flex;
-    justify-content: space-between !important;
-  }
-
-  .image-card-date p {
-    font-size: 14px;
-    color: #757575;
-    margin: 0;
-  }
+.image-card-date p {
+  font-size: 14px;
+  color: #757575;
+  margin: 0;
+}

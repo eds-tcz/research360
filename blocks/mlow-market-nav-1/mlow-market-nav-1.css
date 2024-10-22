@@ -5,10 +5,8 @@
 
 
 .mlow-market-nav-1-wrapper{
-
    max-width: 1366px !important;
    margin: 0 auto;
-
 }
 
 
@@ -48,6 +46,7 @@
   max-width: 600px;
   border-radius: 50px;
 }
+
 .search-bar input{
     border: none;
   outline: none;
