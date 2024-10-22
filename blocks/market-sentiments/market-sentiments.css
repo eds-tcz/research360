@@ -3,7 +3,7 @@
     max-width: 100% !important;
     width: 90% !important;
 }
-.market-sentiments-text > p
+.market-sentiments-text > div > p
 {
     font-size: 22px;
     font-weight: 500;
