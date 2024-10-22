@@ -3,8 +3,8 @@ export default function decorate(block) {
         row.classList.add('nifty-cards');
         [...row.children].forEach((div, index) => {
             div.classList.add(`nifty-cards-${index + 1}`);
-            const paragraphs = div.querySelectorAll('p'); 
-            
+            const paragraphs = div.querySelectorAll('p');
+
             if (paragraphs.length >= 2) {
                 const wrapper = document.createElement('div');
                 wrapper.classList.add('flex-wrapper');
@@ -31,7 +31,7 @@ export default function decorate(block) {
                     const tab = document.createElement('button');
                     tab.textContent = time;
                     tab.classList.add('time-tab');
-                    if(time === '1D') tab.classList.add('active');
+                    if (time === '1D') tab.classList.add('active');
                     timeNav.appendChild(tab);
                 });
 
@@ -49,9 +49,9 @@ export default function decorate(block) {
                 graphContainer.appendChild(timeNav);
                 graphContainer.appendChild(graph);
                 div.appendChild(graphContainer);
-            
+
             }
         });
-        
+
     });
 }
