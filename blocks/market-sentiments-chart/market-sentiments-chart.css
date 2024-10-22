@@ -15,7 +15,10 @@
     margin-bottom: 0rem !important;
     height: fit-content;
 }
-
+.market-sentiments-chart-container
+{
+    padding-top: 20px;
+}
 .market-sentiment-text-1 {
     font-weight: 500;
     font-size: 20px;

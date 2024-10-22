@@ -9,7 +9,7 @@ export default function decorate(block) {
             });
             if (index === 0 && r === 0) {
                 const hr = document.createElement('hr');
-                div.parentNode.insertBefore(hr, div.nextSibling);
+                // div.parentNode.insertBefore(hr, div.nextSibling);
             }
         });
     });
