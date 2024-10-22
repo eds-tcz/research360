@@ -1,0 +1,53 @@
+.mlow-market-footer-container{
+    background-color: #000;
+    padding-top: 48px;
+    color: #fff;
+    padding: 48px 0 0 0 !important;
+
+}
+
+.mlow-market-footer-wrapper{
+    max-width: 1320px !important;
+    margin: 0 auto; /* Center the container */
+}
+
+.mlow-market-footer{
+    display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows wrapping in smaller screens */
+  gap: 20px;
+
+}
+
+.footer-col{
+  width: 200px; /* Minimum width for responsive design */
+  flex-grow: 1;
+  padding: 0 8px;
+  font-size: 14px;
+
+}
+
+.footer-col h2{
+    font-size: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d8d6cf !important;
+    font-weight: bold;
+}
+
+.footer-list{
+    margin-bottom: 30px;
+}
+
+.footer-list ul{
+    list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li{
+    padding: 4px 0px;
+}
+
+.footer-list ul li a{
+    color: #fffdff99;
+ }

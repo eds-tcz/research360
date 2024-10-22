@@ -1,0 +1,15 @@
+.mlow-footer-copyright-container{
+    padding: 0 !important;
+    height: 44px;
+    background-color: #3b3b3b;
+    color: #b6b6b6;
+    display: flex;
+}
+
+.mlow-footer-copyright-wrapper{
+    margin: auto;
+}
+
+.footer-copy p{
+    font-size: 14px;
+}
