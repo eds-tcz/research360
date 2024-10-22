@@ -2,7 +2,7 @@ export default function decorate(block) {
   [...block.children].forEach((row, r) => {
     // Adding Classes to All <div> tags under main tag
     row.classList.add('header-nav-row-'.concat(r + 1));
-    if ( r === 0) {
+    if (r === 0) {
       [...row.children].forEach((div, d) => {
         if (d === 0) {
           div.classList.add('main-logo');
@@ -11,9 +11,9 @@ export default function decorate(block) {
           div.classList.add('main-search-bar');
           const pTag = div.querySelector('p');
           if (pTag) {
-             pTag.remove();
+            pTag.remove();
           }
-        // Create and append the search bar dynamically
+          // Create and append the search bar dynamically
           const searchBarContainer = document.createElement('div');
           searchBarContainer.classList.add('search-bar-container');
           const searchBar = document.createElement('div');
