@@ -1,0 +1,10 @@
+.market-sentiments-wrapper
+{
+    max-width: 100% !important;
+    width: 90% !important;
+}
+.market-sentiments-text > p
+{
+    font-size: 22px;
+    font-weight: 500;
+}
