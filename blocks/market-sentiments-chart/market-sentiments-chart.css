@@ -1,20 +1,18 @@
 .market-sentiments-chart {
     width: 100%;
     justify-content: space-between;
-    /* gap: 16px; */
+
     flex-wrap: wrap;
     display: flex;
 }
 
 .market-sentiments-div {
-    /* margin-right: 15px; */
     width: 204.167px;
     border: 1px solid #ddd !important;
     border-radius: .5rem;
     overflow: hidden;
     padding: 12px !important;
     margin-bottom: 0rem !important;
-    /* height: fit-content; */
 }
 .market-sentiments-chart-wrapper
 {

@@ -6,7 +6,7 @@
     display: flex !important;
 }
 
-.world-indices {
+.world-indices-div {
     /* margin-right: 15px; */
     width: 204.167px;
     border: 1px solid #ddd !important;
@@ -16,21 +16,21 @@
     margin-bottom: 0rem !important;
     /* height: fit-content; */
 }
-.world-indices
+.world-indices-wrapper
 {
     max-width: 90% !important;
 }
-.world-indices
+.world-indices-container
 {
-    padding-top: 5px;
+    padding-top: 15px;
 }
-.world-indices {
+.world-indices-text-1 {
     font-weight: 500;
     font-size: 20px;
     margin-bottom: -10px;
 }
 
-.world-indices {
+.world-indices-text-2 {
     color: #999;
     font-size: 14px !important;
     line-height: 21px;
