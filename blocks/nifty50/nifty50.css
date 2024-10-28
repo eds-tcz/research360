@@ -1,6 +1,6 @@
 .nifty50-wrapper {
     width: 90%;
-    max-width: 90%;
+    max-width: 90% !important;
 }
 
 .nifty50-container {
@@ -14,7 +14,7 @@
     overflow: hidden;
     padding: 12px !important;
     margin-bottom: 0rem !important;
-    height: fit-content;
+    /* height: fit-content; */
 
 }
 

@@ -1,12 +1,12 @@
-.market-sentiments-chart {
+.world-indices {
     width: 100%;
     justify-content: space-between;
     /* gap: 16px; */
     flex-wrap: wrap;
-    display: flex;
+    display: flex !important;
 }
 
-.market-sentiments-div {
+.world-indices {
     /* margin-right: 15px; */
     width: 204.167px;
     border: 1px solid #ddd !important;
@@ -16,21 +16,21 @@
     margin-bottom: 0rem !important;
     /* height: fit-content; */
 }
-.market-sentiments-chart-wrapper
+.world-indices
 {
     max-width: 90% !important;
 }
-.market-sentiments-chart-container
+.world-indices
 {
     padding-top: 5px;
 }
-.market-sentiment-text-1 {
+.world-indices {
     font-weight: 500;
     font-size: 20px;
     margin-bottom: -10px;
 }
 
-.market-sentiment-text-2 {
+.world-indices {
     color: #999;
     font-size: 14px !important;
     line-height: 21px;
