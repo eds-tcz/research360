@@ -1,13 +1,13 @@
-.mlow-market-cards-container{
-    padding: 0 !important;
+.mlow-market-cards-container {
+  padding: 0 !important;
 }
 
-.mlow-market-cards-wrapper{
-    max-width: 1366px !important;
+.mlow-market-cards-wrapper {
+  max-width: 1366px !important;
 }
 
-.mlow-market-cards{
-    display: flex;
+.mlow-market-cards {
+  display: flex;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: space-between;
@@ -45,7 +45,7 @@
   text-align: left;
 }
 
-.image-card-title p{
+.image-card-title p {
   padding: 8px 0;
   font-size: 18px;
   font-weight: bold;
