@@ -64,19 +64,20 @@ function getNifty50Data(indexCode) {
     .then((data) => {
       const indexData = data.data[0];
       const nifty50Card = document.querySelector('.nifty50 .nifty-cards-1');
-      nifty50Card.querySelector('.nifty-paragraph-1').innerText = indexData.co_name || 'NIFTY 50';
+      nifty50Card.querySelector('.nifty-paragraph-1').innerText =
+        indexData.co_name || 'NIFTY 50';
       nifty50Card.querySelector(
-        '.nifty-paragraph-2',
+        '.nifty-paragraph-2'
       ).innerText = `${new Date().toLocaleTimeString()}`;
       nifty50Card.querySelector(
-        '.nifty-paragraph-3',
+        '.nifty-paragraph-3'
       ).innerText = `${indexData.ltp}`;
       const additionalInfo = document.createElement('p');
       nifty50Card.appendChild(additionalInfo);
-    })
-    .catch((error) => {
-      console.error('API Call Failed:', error);
     });
+  // .catch((error) => {
+  //   console.error('API Call Failed:', error);
+  // });
 }
 
 getNifty50Data('20559');
