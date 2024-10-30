@@ -11,7 +11,6 @@ function updateActiveSlide(slide) {
   const block = slide.closest('.carousel');
   const slideIndex = parseInt(slide.dataset.slideIndex, 10);
   const slidesPerView = getSlidesPerView();
-
   block.dataset.activeSlide = slideIndex;
 
   const slides = block.querySelectorAll('.carousel-slide');
@@ -31,7 +30,7 @@ function updateActiveSlide(slide) {
   indicators.forEach((indicator, idx) => {
     const indicatorSlideIndex = idx * slidesPerView;
     const isActive =
-      slideIndex >= indicatorSlideIndex &&
+      indicatorSlideIndex <= slideIndex &&
       slideIndex < indicatorSlideIndex + slidesPerView;
 
     if (!isActive) {
@@ -71,87 +70,10 @@ function showSlide(block, slideIndex = 0) {
   });
 }
 
-function bindEvents(block) {
-  const slideIndicators = block.querySelector('.carousel-slide-indicators');
-  if (!slideIndicators) return;
-
-  const slides = block.querySelectorAll('.carousel-slide');
-  const slidesPerView = getSlidesPerView();
-  const totalGroups = Math.ceil(slides.length / slidesPerView);
-
-  slideIndicators.innerHTML = '';
-
-  for (let i = 0; i < totalGroups; i++) {
-    const indicator = document.createElement('li');
-    indicator.classList.add('carousel-slide-indicator');
-    indicator.dataset.targetSlide = i * slidesPerView;
-    indicator.innerHTML = `<button type="button" aria-label="Show Slide Group ${
-      i + 1
-    } of ${totalGroups}"></button>`;
-    slideIndicators.append(indicator);
-  }
-
-  // Bind indicator clicks
-  slideIndicators.querySelectorAll('button').forEach((button) => {
-    button.addEventListener('click', (e) => {
-      const slideIndicator = e.currentTarget.parentElement;
-      showSlide(block, parseInt(slideIndicator.dataset.targetSlide, 10));
-    });
-  });
-
-  // Navigation buttons
-  block.querySelector('.slide-prev').addEventListener('click', () => {
-    const currentIndex = parseInt(block.dataset.activeSlide, 10);
-    showSlide(block, currentIndex - slidesPerView);
-  });
-
-  block.querySelector('.slide-next').addEventListener('click', () => {
-    const currentIndex = parseInt(block.dataset.activeSlide, 10);
-    showSlide(block, currentIndex + slidesPerView);
-  });
-
-  // Intersection Observer for slide tracking
-  const slideObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) updateActiveSlide(entry.target);
-      });
-    },
-    {
-      threshold: 0.5,
-    }
-  );
-
-  slides.forEach((slide) => {
-    slideObserver.observe(slide);
-  });
-}
-
-function createSlide(row, slideIndex, carouselId) {
-  const slide = document.createElement('li');
-  slide.dataset.slideIndex = slideIndex;
-  slide.setAttribute('id', `carousel-${carouselId}-slide-${slideIndex}`);
-  slide.classList.add('carousel-slide');
-
-  row.querySelectorAll(':scope > div').forEach((column, colIdx) => {
-    column.classList.add(
-      `carousel-slide-${colIdx === 0 ? 'image' : 'content'}`
-    );
-    slide.append(column);
-  });
-
-  const labeledBy = slide.querySelector('h1, h2, h3, h4, h5, h6');
-  if (labeledBy) {
-    slide.setAttribute('aria-labelledby', labeledBy.getAttribute('id'));
-  }
-
-  return slide;
-}
-
-let carouselId = 0;
+let carouselCounter = 0;
 export default async function decorate(block) {
-  carouselId += 1;
-  block.setAttribute('id', `carousel-${carouselId}`);
+  carouselCounter += 1;
+  block.setAttribute('id', `carousel-${carouselCounter}`);
   const rows = block.querySelectorAll(':scope > div');
   const isSingleSlide = rows.length < 2;
 
@@ -185,7 +107,7 @@ export default async function decorate(block) {
     const slideNavButtons = document.createElement('div');
     slideNavButtons.classList.add('carousel-navigation-buttons');
     slideNavButtons.innerHTML = `
-      <button type="button" class= "slide-prev" aria-label="${
+      <button type="button" class="slide-prev" aria-label="${
         placeholders.previousSlide || 'Previous Slide'
       }"></button>
       <button type="button" class="slide-next" aria-label="${
@@ -197,7 +119,7 @@ export default async function decorate(block) {
   }
 
   rows.forEach((row, idx) => {
-    const slide = createSlide(row, idx, carouselId);
+    const slide = createSlide(row, idx, carouselCounter);
     slidesWrapper.append(slide);
 
     if (slideIndicators) {
@@ -224,9 +146,7 @@ window.addEventListener('resize', () => {
   const carousels = document.querySelectorAll('.carousel');
   carousels.forEach((carousel) => {
     const activeSlideIndex = parseInt(carousel.dataset.activeSlide || 0, 10);
-
     bindEvents(carousel);
-
     showSlide(carousel, activeSlideIndex);
   });
 });
