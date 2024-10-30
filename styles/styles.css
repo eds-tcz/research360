@@ -207,7 +207,7 @@ button {
     white-space: nowrap;
 } */
 
-a.button:hover,
+/* a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
@@ -219,7 +219,7 @@ button:disabled,
 button:disabled:hover {
   background-color: var(--light-color);
   cursor: unset;
-}
+} */
 
 a.button.secondary,
 button.secondary {
