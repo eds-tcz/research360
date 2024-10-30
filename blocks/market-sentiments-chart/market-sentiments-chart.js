@@ -1,6 +1,11 @@
 async function getIndianIndices() {
   const url = 'https://research360api.motilaloswal.com/api/getapisdata';
   const apiName = 'GET_INDIAN_INDICES_WEB';
+  function getChangeColor(perChange) {
+    if (perChange > 0) return 'green';
+    if (perChange < 0) return 'red';
+    return 'inherit';
+  }
   function updateDivContent(div, data) {
     const text1 = div.querySelector('.market-sentiment-text-1');
     const text2 = div.querySelector('.market-sentiment-text-2');
@@ -28,11 +33,7 @@ async function getIndianIndices() {
     if (text2) text2.textContent = '';
     if (text3) text3.textContent = '';
   }
-  function getChangeColor(perChange) {
-    if (perChange > 0) return 'green';
-    if (perChange < 0) return 'red';
-    return 'inherit';
-  }
+
   function populateIndianIndices(marketData) {
     if (!marketData) return;
 
