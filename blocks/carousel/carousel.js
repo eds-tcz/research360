@@ -1,16 +1,26 @@
 import { fetchPlaceholders } from '../../scripts/aem.js';
+function getSlidesPerView() {
+  if (window.innerWidth <= 576) return 1;
+  if (window.innerWidth <= 992) return 2;
+  if (window.innerWidth <= 1200) return 3;
+  return 4;
+}
+
+
 
 function updateActiveSlide(slide) {
   const block = slide.closest('.carousel');
   const slideIndex = parseInt(slide.dataset.slideIndex, 10);
+  const slidesPerView = getSlidesPerView();
+
   block.dataset.activeSlide = slideIndex;
 
   const slides = block.querySelectorAll('.carousel-slide');
-
   slides.forEach((aSlide, idx) => {
-    aSlide.setAttribute('aria-hidden', idx !== slideIndex);
+    const isActive = idx >= slideIndex && idx < slideIndex + slidesPerView;
+    aSlide.setAttribute('aria-hidden', !isActive);
     aSlide.querySelectorAll('a').forEach((link) => {
-      if (idx !== slideIndex) {
+      if (!isActive) {
         link.setAttribute('tabindex', '-1');
       } else {
         link.removeAttribute('tabindex');
@@ -20,7 +30,11 @@ function updateActiveSlide(slide) {
 
   const indicators = block.querySelectorAll('.carousel-slide-indicator');
   indicators.forEach((indicator, idx) => {
-    if (idx !== slideIndex) {
+    const indicatorSlideIndex = idx * slidesPerView;
+    const isActive = slideIndex >= indicatorSlideIndex &&
+      slideIndex < indicatorSlideIndex + slidesPerView;
+
+    if (!isActive) {
       indicator.querySelector('button').removeAttribute('disabled');
     } else {
       indicator.querySelector('button').setAttribute('disabled', 'true');
@@ -28,11 +42,25 @@ function updateActiveSlide(slide) {
   });
 }
 
+
 function showSlide(block, slideIndex = 0) {
   const slides = block.querySelectorAll('.carousel-slide');
-  let realSlideIndex = slideIndex < 0 ? slides.length - 1 : slideIndex;
-  if (slideIndex >= slides.length) realSlideIndex = 0;
+  const slidesPerView = getSlidesPerView();
+
+  let realSlideIndex = slideIndex < 0 ? Math.max(0, slides.length - slidesPerView) : slideIndex;
+  if (slideIndex >= slides.length - slidesPerView + 1) realSlideIndex = 0;
+
   const activeSlide = slides[realSlideIndex];
+
+
+  const prevButton = block.querySelector('.slide-prev');
+  const nextButton = block.querySelector('.slide-next');
+
+  if (prevButton && nextButton) {
+    prevButton.style.display = realSlideIndex === 0 ? 'none' : 'block';
+    nextButton.style.display = realSlideIndex >= slides.length - slidesPerView ? 'none' : 'block';
+  }
+
 
   activeSlide.querySelectorAll('a').forEach((link) => link.removeAttribute('tabindex'));
   block.querySelector('.carousel-slides').scrollTo({
@@ -46,6 +74,22 @@ function bindEvents(block) {
   const slideIndicators = block.querySelector('.carousel-slide-indicators');
   if (!slideIndicators) return;
 
+  const slides = block.querySelectorAll('.carousel-slide');
+  const slidesPerView = getSlidesPerView();
+  const totalGroups = Math.ceil(slides.length / slidesPerView);
+
+  slideIndicators.innerHTML = '';
+
+
+  for (let i = 0; i < totalGroups; i++) {
+    const indicator = document.createElement('li');
+    indicator.classList.add('carousel-slide-indicator');
+    indicator.dataset.targetSlide = i * slidesPerView;
+    indicator.innerHTML = `<button type="button" aria-label="Show Slide Group ${i + 1} of ${totalGroups}"></button>`;
+    slideIndicators.append(indicator);
+  }
+
+  // Bind indicator clicks
   slideIndicators.querySelectorAll('button').forEach((button) => {
     button.addEventListener('click', (e) => {
       const slideIndicator = e.currentTarget.parentElement;
@@ -53,19 +97,25 @@ function bindEvents(block) {
     });
   });
 
+  // Navigation buttons
   block.querySelector('.slide-prev').addEventListener('click', () => {
-    showSlide(block, parseInt(block.dataset.activeSlide, 10) - 1);
-  });
-  block.querySelector('.slide-next').addEventListener('click', () => {
-    showSlide(block, parseInt(block.dataset.activeSlide, 10) + 1);
+    const currentIndex = parseInt(block.dataset.activeSlide, 10);
+    showSlide(block, currentIndex - slidesPerView);
   });
 
+  block.querySelector('.slide-next').addEventListener('click', () => {
+    const currentIndex = parseInt(block.dataset.activeSlide, 10);
+    showSlide(block, currentIndex + slidesPerView);
+  });
+
+  // Intersection Observer for slide tracking
   const slideObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) updateActiveSlide(entry.target);
     });
   }, { threshold: 0.5 });
-  block.querySelectorAll('.carousel-slide').forEach((slide) => {
+
+  slides.forEach((slide) => {
     slideObserver.observe(slide);
   });
 }
@@ -148,3 +198,14 @@ export default async function decorate(block) {
     bindEvents(block);
   }
 }
+
+window.addEventListener('resize', () => {
+  const carousels = document.querySelectorAll('.carousel');
+  carousels.forEach(carousel => {
+    const activeSlideIndex = parseInt(carousel.dataset.activeSlide || 0, 10);
+
+    bindEvents(carousel);
+
+    showSlide(carousel, activeSlideIndex);
+  });
+});

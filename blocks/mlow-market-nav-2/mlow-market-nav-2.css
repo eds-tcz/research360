@@ -1,12 +1,12 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-.mlow-market-nav-2-container{
+.mlow-market-nav-2-container {
     padding: 8px 0 !important;
 }
 
-.mlow-market-nav-2-wrapper{
+.mlow-market-nav-2-wrapper {
     max-width: 1366px !important;
     height: 46px !important;
     align-items: center;
@@ -18,13 +18,13 @@
     background-color: white;
 }
 
-.nav-bar ul{
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 0;
-  padding-left: 0 !important;
+.nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding-left: 0 !important;
 }
 
 .nav-bar ul li {
@@ -32,15 +32,16 @@
     font-size: 14px;
 }
 
-.nav-bar ul li a{
+.nav-bar ul li a {
     text-decoration: none;
-  color: #9e9e9e; /* Gray color for default links */
-  font-size: 14px;
-  font-weight: 500;
-  padding: 6px;
+    color: #9e9e9e;
+    /* Gray color for default links */
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px;
 }
 
-.nav-bar ul li:first-child a{
+.nav-bar ul li:first-child a {
     background-color: #f1a100;
     position: relative;
     border-radius: 1.25rem;
@@ -49,7 +50,7 @@
     font-weight: 600;
 }
 
-.nav-bar ul li a:hover{
+.nav-bar ul li a:hover {
     background-color: #f1a100;
     position: relative;
     border-radius: 1.25rem;
