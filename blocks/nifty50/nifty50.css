@@ -1,93 +1,92 @@
 .nifty50-wrapper {
-    width: 90%;
-    max-width: 90% !important;
+  width: 90%;
+  max-width: 90% !important;
 }
 
 .nifty50-container {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .nifty-cards {
-    width: 32%;
-    border: 1px solid #ddd !important;
-    border-radius: .5rem;
-    overflow: hidden;
-    padding: 12px !important;
-    margin-bottom: 0rem !important;
-    /* height: fit-content; */
+  width: 32%;
+  border: 1px solid #ddd !important;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 12px !important;
+  margin-bottom: 0 !important;
 
+  /* height: fit-content; */
 }
 
-.nifty-cards-1,
-.nifty-cards-2,
-.nifty-cards-3 {}
-
 .nifty50 {
-    width: 100%;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
-    display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  display: flex;
 }
 
 .flex-wrapper {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nifty-paragraph-3 {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .nifty-paragraph-1 {
-    font-size: 16px;
-    font-weight: 500;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .nifty-paragraph-2 {
-    color: #999;
-    font-size: 12px !important;
+  color: #999;
+  font-size: 12px !important;
 }
 
 .graph-container {
-    padding-bottom: 15px;
-
+  padding-bottom: 15px;
 }
 
 .time-nav {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
 .time-tab {
-    padding: 4px 15px;
-    border-radius: 15px;
-    border: 1px solid #b6b6b6 !important;
-    background: transparent;
-    cursor: pointer;
-    font-size: 14px;
-    color: #b6b6b6 !important
+  padding: 4px 15px;
+  border-radius: 15px;
+  border: 1px solid #b6b6b6 !important;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  color: #b6b6b6 !important;
 }
 
 .time-tab.active {
-    background: #FFA500;
-    color: black !important;
-    border-color: #FFA500;
+  background: #ffa500;
+  color: black !important;
+  border-color: #ffa500;
 }
 
 .time-tab:hover {
-    background-color: white;
-    color: black !important;
+  background-color: white;
+  color: black !important;
 }
 
 .graph-area {
-    height: 92px;
-    background: linear-gradient(180deg, rgb(242 7 49 / 91%) 0%, rgb(70 64 65 / 13%) 100%);
-    position: relative;
-    border-radius: 8px;
+  height: 92px;
+  background: linear-gradient(
+    180deg,
+    rgb(242 7 49 / 91%) 0%,
+    rgb(70 64 65 / 13%) 100%
+  );
+  position: relative;
+  border-radius: 8px;
 }
 
 /* 
@@ -126,26 +125,26 @@
 
 /* Price labels */
 .graph-container::before {
-    content: '24800.00';
-    position: absolute;
-    top: 40px;
-    right: 20px;
-    color: #666;
-    font-size: 12px;
+  content: '24800.00';
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  color: #666;
+  font-size: 12px;
 }
 
 hr {
-    border: none;
-    border-top: 1px solid #eee;
+  border: none;
+  border-top: 1px solid #eee;
 }
 
 .time-labels {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: -25px;
-    left: 20px;
-    right: 20px;
-    color: #666;
-    font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: -25px;
+  left: 20px;
+  right: 20px;
+  color: #666;
+  font-size: 12px;
 }
