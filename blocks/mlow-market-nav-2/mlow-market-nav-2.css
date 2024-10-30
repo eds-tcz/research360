@@ -35,6 +35,7 @@
 .nav-bar ul li a {
     text-decoration: none;
     color: #9e9e9e;
+
     /* Gray color for default links */
     font-size: 14px;
     font-weight: 500;
