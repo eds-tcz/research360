@@ -1,4 +1,5 @@
 import { fetchPlaceholders } from '../../scripts/aem.js';
+
 function getSlidesPerView() {
   if (window.innerWidth <= 576) return 1;
   if (window.innerWidth <= 992) return 2;
@@ -116,7 +117,9 @@ function bindEvents(block) {
         if (entry.isIntersecting) updateActiveSlide(entry.target);
       });
     },
-    { threshold: 0.5 }
+    {
+      threshold: 0.5,
+    }
   );
 
   slides.forEach((slide) => {

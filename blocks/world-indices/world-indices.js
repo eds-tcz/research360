@@ -8,7 +8,7 @@ export default function decorate(block) {
         p.classList.add(`world-indices-text-${pIndex + 1}`);
       });
       if (index === 0 && r === 0) {
-        const hr = document.createElement('hr');
+        // const hr = document.createElement('hr');
       }
     });
   });

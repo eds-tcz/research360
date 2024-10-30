@@ -64,27 +64,27 @@ function populateIndianIndices(marketData) {
 }
 getIndianIndices();
 
-export default async function decorate(block) {
-  getIndianIndices(block);
-}
+// export default async function decorate(block) {
+//   getIndianIndices(block);
+// }
 
-function getIndianIndices(block) {
-  const url = 'https://research360api.motilaloswal.com/api/getapisdata';
-  const apiName = 'GET_INDIAN_INDICES_WEB';
+// function getIndianIndices(block) {
+//   const url = 'https://research360api.motilaloswal.com/api/getapisdata';
+//   const apiName = 'GET_INDIAN_INDICES_WEB';
 
-  fetch(`${url}?api_name=${apiName}&index_code=1`)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((data) => {
-      console.log('API Call Successful:', data);
-      let marketData = data?.data[0].index_nm;
-      block.append(marketData);
-    })
-    .catch((error) => {
-      console.error('API Call Failed:', error);
-    });
-}
+//   fetch(`${url}?api_name=${apiName}&index_code=1`)
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw new Error(`HTTP error! Status: ${response.status}`);
+//       }
+//       return response.json();
+//     })
+//     .then((data) => {
+//       console.log('API Call Successful:', data);
+//       let marketData = data?.data[0].index_nm;
+//       block.append(marketData);
+//     })
+//     .catch((error) => {
+//       console.error('API Call Failed:', error);
+//     });
+// }
