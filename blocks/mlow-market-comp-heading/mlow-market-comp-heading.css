@@ -37,5 +37,5 @@
   content: ' \003e'; /* Unicode for '>' */
   margin-left: 5px; /* Add space between text and caret */
   font-size: 14px; /* Adjust the caret size to match the text */
-  color: inherit; /* Make sure it inherits the color of the text */
+  color: inherit; /* Make scure it inherits the color of the text */
 }
