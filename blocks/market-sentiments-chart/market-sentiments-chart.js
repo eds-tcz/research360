@@ -15,8 +15,8 @@
 //     });
 // }
 function getIndianIndices() {
-  const url = "https://research360api.motilaloswal.com/api/getapisdata";
-  const apiName = "GET_INDIAN_INDICES_WEB";
+  const url = 'https://research360api.motilaloswal.com/api/getapisdata';
+  const apiName = 'GET_INDIAN_INDICES_WEB';
 
   fetch(`${url}?api_name=${apiName}&index_code=1`)
     .then((response) => {
@@ -26,23 +26,23 @@ function getIndianIndices() {
       return response.json();
     })
     .then((data) => {
-      console.log("API Call Successful:", data);
+      console.log('API Call Successful:', data);
       let marketData = data?.data;
       populateIndianIndices(marketData);
     })
     .catch((error) => {
-      console.error("API Call Failed:", error);
+      console.error('API Call Failed:', error);
     });
 }
 function populateIndianIndices(marketData) {
-  const sentimentDivs = document.querySelectorAll(".market-sentiments-div");
+  const sentimentDivs = document.querySelectorAll('.market-sentiments-div');
   sentimentDivs.forEach((div, index) => {
     if (index < marketData.length) {
       const data = marketData[index];
-      const text1 = div.querySelector(".market-sentiment-text-1");
-      const text2 = div.querySelector(".market-sentiment-text-2");
-      const text3 = div.querySelector(".market-sentiment-text-3");
-      const perChangeSign = data.per_change > 0 ? "+" : "-";
+      const text1 = div.querySelector('.market-sentiment-text-1');
+      const text2 = div.querySelector('.market-sentiment-text-2');
+      const text3 = div.querySelector('.market-sentiment-text-3');
+      const perChangeSign = data.per_change > 0 ? '+' : '-';
 
       const formattedDataChange = parseFloat(data.change).toFixed(2);
       const formattedPerChange = parseFloat(data.per_change).toFixed(2);
@@ -51,14 +51,14 @@ function populateIndianIndices(marketData) {
       text2.textContent = `${data.ltp}`;
       text3.textContent = `${perChangeSign}${formattedDataChange}(${perChangeSign}${formattedPerChange}%)`;
       if (data.per_change > 0) {
-        text3.style.color = "green"; // Set text color to green for positive change
+        text3.style.color = 'green'; // Set text color to green for positive change
       } else if (data.per_change < 0) {
-        text3.style.color = "red"; // Set text color to red for negative change
+        text3.style.color = 'red'; // Set text color to red for negative change
       }
     } else {
       // Clear content if no data is available
-      div.querySelector(".market-sentiment-text-1").textContent = "";
-      div.querySelector(".market-sentiment-text-2").textContent = "";
+      div.querySelector('.market-sentiment-text-1').textContent = '';
+      div.querySelector('.market-sentiment-text-2').textContent = '';
     }
   });
 }
@@ -69,8 +69,8 @@ export default async function decorate(block) {
 }
 
 function getIndianIndices(block) {
-  const url = "https://research360api.motilaloswal.com/api/getapisdata";
-  const apiName = "GET_INDIAN_INDICES_WEB";
+  const url = 'https://research360api.motilaloswal.com/api/getapisdata';
+  const apiName = 'GET_INDIAN_INDICES_WEB';
 
   fetch(`${url}?api_name=${apiName}&index_code=1`)
     .then((response) => {
@@ -80,11 +80,11 @@ function getIndianIndices(block) {
       return response.json();
     })
     .then((data) => {
-      console.log("API Call Successful:", data);
+      console.log('API Call Successful:', data);
       let marketData = data?.data[0].index_nm;
       block.append(marketData);
     })
     .catch((error) => {
-      console.error("API Call Failed:", error);
+      console.error('API Call Failed:', error);
     });
 }
