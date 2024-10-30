@@ -24,7 +24,6 @@ export default function decorate(block) {
         const graphContainer = document.createElement('div');
         graphContainer.classList.add('graph-container');
 
-        // Create time tabs
         const timeNav = document.createElement('div');
         timeNav.classList.add('time-nav');
         ['1D', '1W', '1M', '3M'].forEach((time) => {
@@ -34,8 +33,6 @@ export default function decorate(block) {
           if (time === '1D') tab.classList.add('active');
           timeNav.appendChild(tab);
         });
-
-        // Create graph area
         const graph = document.createElement('div');
         graph.classList.add('graph-area');
         const timeLabels = document.createElement('div');
@@ -65,15 +62,8 @@ function getNifty50Data(indexCode) {
       return response.json();
     })
     .then((data) => {
-      console.log('API Call Successful:', data);
-
-      // Assuming the first item in the "data" array is the relevant information
       const indexData = data.data[0];
-
-      // Select the first Nifty 50 card and update its content
       const nifty50Card = document.querySelector('.nifty50 .nifty-cards-1');
-
-      // Update the content within the card
       nifty50Card.querySelector('.nifty-paragraph-1').innerText =
         indexData.co_name || 'NIFTY 50';
       nifty50Card.querySelector(
@@ -82,10 +72,7 @@ function getNifty50Data(indexCode) {
       nifty50Card.querySelector(
         '.nifty-paragraph-3'
       ).innerText = `${indexData.ltp}`;
-
-      // Add more data if needed
       const additionalInfo = document.createElement('p');
-      // additionalInfo.innerText = `Day Change: ${indexData.price_change} (${indexData.price_change_per}%)`;
       nifty50Card.appendChild(additionalInfo);
     })
     .catch((error) => {
@@ -93,5 +80,4 @@ function getNifty50Data(indexCode) {
     });
 }
 
-// Call the function with the index code for Nifty 50
 getNifty50Data('20559');
