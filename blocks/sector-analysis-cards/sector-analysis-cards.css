@@ -1,0 +1,169 @@
+/* Card Container */
+.item {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    max-width: 400px;
+}
+
+/* Header Section */
+.sector-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.sector-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.sector-change {
+    color: #00c48c;
+    font-weight: 500;
+}
+
+.sector-change.negative {
+    color: #ff4f6a;
+}
+
+/* Progress Bar */
+.progressBar {
+    margin-bottom: 8px;
+}
+
+.progress {
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: transparent;
+}
+
+.progress-advance {
+    background: #00c48c;
+    height: 100%;
+    float: left;
+}
+
+.progress-decline {
+    background: #ff4f6a;
+    height: 100%;
+    float: left;
+}
+
+/* Stats */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.stat-item small {
+    color: #666;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.stat-value {
+    font-weight: 500;
+}
+
+.stat-value.positive {
+    color: #00c48c;
+}
+
+.stat-value.negative {
+    color: #ff4f6a;
+}
+
+/* Table Styles */
+.stock-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.font-GraniteGray tr:first-child {
+    border: 1px solid #eee;
+}
+
+.stock-table th {
+    text-align: left;
+    color: #666;
+    font-weight: normal;
+    padding: 8px 4px;
+border-bottom: 1px solid #eee;
+}
+
+.stock-table td {
+    padding: 12px 4px;
+    color: #333;
+}
+
+.stock-table th:not(:first-child),
+.stock-table td:not(:first-child) {
+    text-align: right;
+}
+
+.stock-symbol {
+    color: #333 !important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.change-value {
+    color: #00c48c;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.change-value.negative {
+    color: #ff4f6a;
+}
+
+.change-arrow {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 6px solid #00c48c;
+    margin-right: 4px;
+}
+
+.change-arrow.negative {
+    border-bottom: none;
+    border-top: 6px solid #ff4f6a;
+}
+
+/* View More Button */
+.view-more-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ffd700;
+    border-radius: 6px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.view-more-btn:hover {
+    background-color: #fff9e6;
+}
+
+/* Remove Bootstrap Classes Overrides */
+.table {
+    margin-bottom: 0;
+}
+
+.col-12 {
+    padding: 0;
+}
