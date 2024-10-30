@@ -142,12 +142,13 @@ async function stockanalysisdata() {
                                                 </tbody>
                                             </table>
                                         </div>
-                                    </div>
-
-                                    <a href="${base_url_web}sector-analysis" 
+                                          <a href="${base_url_web}sector-analysis" 
                                        class="btn w-100 border BorderBrightYellow font-medium16 font-wt-medium mt-auto">
                                         <span>View more</span>
                                     </a>
+                                    </div>
+
+                                  
                                 </div>
                             </div>
                         </div>
