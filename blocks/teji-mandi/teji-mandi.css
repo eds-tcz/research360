@@ -1,0 +1,46 @@
+.teji-mandi-container {
+    margin-top: 20px;
+    padding: 0 !important;
+}
+
+.teji-mandi-heading {
+    border-bottom: 1px solid #d8d6cf !important
+}
+
+.mlow-market-comp-heading-wrapper {
+    max-width: 1366px !important;
+}
+
+.heading-with-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mlow-heading-h2 h2 {
+    font-size: 22px;
+    margin: 0 !important;
+    color: #000;
+}
+
+.heading-with-button p {
+    margin: 0 !important;
+
+}
+
+.mlow-button-view-more a {
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mlow-button-view-more a::after {
+    content: ' \003e';
+    /* Unicode for '>' */
+    margin-left: 5px;
+    /* Add space between text and caret */
+    font-size: 14px;
+    /* Adjust the caret size to match the text */
+    color: inherit;
+    /* Make sure it inherits the color of the text */
+}
