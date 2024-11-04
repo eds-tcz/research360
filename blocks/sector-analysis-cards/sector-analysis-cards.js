@@ -5,7 +5,7 @@ export default function decorate() {
 }
 
 async function stockanalysisdata() {
-  let s = 0,
+  const s = 0,
     str = '',
     index = 0,
     exchangeName = 'NSE';
