@@ -5,11 +5,11 @@ export default function decorate() {
 }
 
 async function stockanalysisdata() {
-  const s = 0,
-    str = '',
-    index = 0,
-    exchangeName = 'NSE';
-  let base_url_web = 'https://www.research360.in/';
+  //   const s = 0,
+  //     str = '',
+  //     index = 0,
+  exchangeName = 'NSE';
+  let Base_Url_Web = 'https://www.research360.in/';
   try {
     const response = await fetch(
       'https://www.research360.in/ajax/markets/indexApiHandler.php?' +
@@ -218,7 +218,7 @@ async function stockanalysisdata() {
                                                                 return `
                                                             <tr>
                                                                 <td>
-                                                                    <a href="${base_url_web}stocks/${
+                                                                    <a href="${Base_Url_Web}stocks/${
                                                                   sectoranalysisoverview.lname
                                                                 }" 
                                                                        class="stock-symbol font-dark">
@@ -262,7 +262,7 @@ async function stockanalysisdata() {
                                                 </tbody>
                                             </table>
                                         </div>
-                                          <a href="${base_url_web}sector-analysis" 
+                                          <a href="${Base_Url_Web}sector-analysis" 
                                        class="btn w-100 border BorderBrightYellow font-medium16 font-wt-medium mt-auto">
                                         <span>View more</span>
                                     </a>
