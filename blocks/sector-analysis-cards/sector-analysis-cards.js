@@ -1,8 +1,8 @@
-// export default function decorate(block) {
-//     stockanalysisdata();
-//     // [...block.children].forEach((row, r) => {
-//     // });
-// }
+export default function decorate() {
+    stockanalysisdata();
+    // [...block.children].forEach((row, r) => {
+    // });
+}
 
 
 async function stockanalysisdata() {
