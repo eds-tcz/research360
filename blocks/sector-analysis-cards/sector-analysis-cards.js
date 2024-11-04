@@ -65,7 +65,7 @@ async function stockanalysisdata() {
                                                     ${stockanalysis.sect_name}
                                                 </a>
                                             </p>
-                                            <p class="font-CaribbeanGreen">
+                                            <p class="font-caribbeangreen">
                                                 <span class="d-inline-flex align-items-center">
                                                     <em class="triangle-${
   parseFloat(
@@ -80,8 +80,8 @@ async function stockanalysisdata() {
   parseFloat(
     stockanalysis.per_change,
   ) >= 0
-    ? 'font-CaribbeanGreen'
-    : 'font-InfraRed'
+    ? 'font-caribbeangreen'
+    : 'font-infrared'
 }">
                                                         ${
   parseFloat(
@@ -99,7 +99,7 @@ async function stockanalysisdata() {
                                     </div>
 
                                     <div class="mb-2">
-                                        <div class="progressBar">
+                                        <div class="progressbar">
                                             <div class="progress mt-1 sector-change">
                                                 <div class="" role="progressbar" 
                                                      style="width: ${
@@ -154,7 +154,7 @@ async function stockanalysisdata() {
     ? `
                                                 <div>
                                                     <small>Advance</small>
-                                                    <b class="font-CaribbeanGreen"> ${Math.round(
+                                                    <b class="font-caribbeangreen"> ${Math.round(
     total
                                                         - parseInt(stockanalysis.decline, 10),
   )
@@ -169,7 +169,7 @@ async function stockanalysisdata() {
     ? `
                                                 <div>
                                                     <small>Decline</small>
-                                                    <b class="font-InfraRed"> ${parseInt(
+                                                    <b class="font-infrared"> ${parseInt(
     stockanalysis.decline,
     10,
   )}</b>
@@ -183,7 +183,7 @@ async function stockanalysisdata() {
                                     <div class="row">
                                         <div class="col-12">
                                             <table class="table stock-table table-borderless ht-46 TableRowShadow TableFixedHeaderColumn TableFirstColEllipsis table-fixed">
-                                                <thead class="font-GraniteGray">
+                                                <thead class="font-granitegray">
                                                     <tr>
                                                         <th>Symbol</th>
                                                         <th class="text-end">PRICE</th>
@@ -227,7 +227,7 @@ async function stockanalysisdata() {
                                                                 </td>
                                                                 <td class="stock-symbol text-end">${ltp}</td>
                                                                 <td class="text-end">
-                                                                    <p class="change-value font-CaribbeanGreen font-wt-medium text-nowrap">
+                                                                    <p class="change-value font-caribbeangreen font-wt-medium text-nowrap">
                                                                         <span class="d-inline-flex align-items-center">
                                                                             <em class="triangle-${
   sectoranalysisoverview.per_change
@@ -239,8 +239,8 @@ async function stockanalysisdata() {
                                                                         <span class="${
   sectoranalysisoverview.per_change
                                                                           >= 0
-    ? 'font-CaribbeanGreen'
-    : 'font-InfraRed'
+    ? 'font-caribbeangreen'
+    : 'font-infrared'
 }">
                                                                             ${parseFloat(
     perChangeVal,

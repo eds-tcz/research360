@@ -50,24 +50,24 @@
 
 .faqs-accordion-question p {
     margin: 0px;
-    font-family: "Roboto", sans-serif !important;
+    font-family: "Roboto";
 }
 
 .faqs-accordion-answer {
     background: #fff;
     padding: 12px;
     border-radius: 4px;
-    font-family: Work Sans;
     font-size: 14px;
     font-weight: 400;
     line-height: 28px;
     text-align: left;
+     display: none;
 }
 
 .faqs-accordion-answer p {
     margin: 0px;
     color: #666;
-    font-family: "Roboto", sans-serif !important;
+    font-family: "Roboto";
 
 }
 
@@ -79,16 +79,13 @@
     border-top-right-radius: 5px;
 }
 
-.faqs-accordion-answer {
-    display: none;
-}
 
 .faqs-accordion-answer.show {
     display: block;
 }
 
 .frequently-asked-questions-pera {
-    font-family: "Roboto", sans-serif !important;
+    font-family: "Roboto";
     font-size: 14px;
     font-weight: 400;
     line-height: 18.77px;

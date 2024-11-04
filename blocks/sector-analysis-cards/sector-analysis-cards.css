@@ -24,7 +24,7 @@
     margin-top: var(--bs-gutter-y);
 }
 
-.progressbar .progress {
+.progressbar.progress {
     height: 8px;
     border-radius: 2px;
     margin-top: .25rem !important;
@@ -36,7 +36,7 @@
     color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
 }
 
-.font-CaribbeanGreen {
+.font-Caribbeangreen {
     color: #2DB777;
     font-size: 14px !important;
     font-weight: 400 !important;
@@ -54,11 +54,11 @@
     border-bottom: 1px solid #d8d6cf;
 }
 
-.font-InfraRed {
+.font-infrared {
     color: #ff4f6a;
 }
 
-.font-GraniteGray th {
+.font-granitegray th {
     background: #f5f4f1 !important;
     font-size: 14px;
 }
@@ -141,7 +141,7 @@
     margin-bottom: 20px;
 }
 
-.font-GraniteGray tr:first-child {
+.font-granitegray tr:first-child {
     border: 1px solid #eee;
 }
 
