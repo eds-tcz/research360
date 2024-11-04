@@ -1,6 +1,7 @@
 .owl-carousel{
     display: flex;
 }
+
 .item {
     padding: 6px;
 
@@ -8,9 +9,9 @@
 
 .owl-item-inner {
     width: 437.333px;
+
     /* margin-right: 15px; */
     padding: 1rem;
-    border-radius: 8px;
     border-radius: 15px;
     border: 1px solid #d8d6cf;
 }
@@ -84,7 +85,6 @@
     color: #ff4f6a;
 }
 
-/* Progress Bar */
 .progresbar {
     margin-bottom: 8px;
 }
