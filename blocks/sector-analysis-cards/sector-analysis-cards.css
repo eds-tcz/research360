@@ -36,7 +36,7 @@
     color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
 }
 
-.font-Caribbeangreen {
+.font-caribbeangreen {
     color: #2DB777;
     font-size: 14px !important;
     font-weight: 400 !important;
