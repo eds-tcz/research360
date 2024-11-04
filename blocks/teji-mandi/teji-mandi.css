@@ -1,13 +1,9 @@
-.mlow-market-comp-heading-container {
-<<<<<<< HEAD
-  margin: 20px 8px;
-=======
-  margin-top: 20px 8px;
->>>>>>> 24225193e3e5fc09d6b89b19fa466532293b9791
+.teji-mandi-container {
+  margin-top: 20px;
   padding: 0 !important;
 }
 
-.mlow-market-comp-heading {
+.teji-mandi-heading {
   border-bottom: 1px solid #d8d6cf !important;
 }
 
@@ -38,12 +34,6 @@
 }
 
 .mlow-button-view-more a::after {
-<<<<<<< HEAD
-  content: ' \003e'; /* Unicode for '>' */
-  margin-left: 5px; /* Add space between text and caret */
-  font-size: 14px; /* Adjust the caret size to match the text */
-  color: inherit; /* Make scure it inherits the color of the text */
-=======
   content: ' \003e';
 
   /* Unicode for '>' */
@@ -56,5 +46,4 @@
   color: inherit;
 
   /* Make sure it inherits the color of the text */
->>>>>>> 24225193e3e5fc09d6b89b19fa466532293b9791
 }

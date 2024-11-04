@@ -1,0 +1,93 @@
+.frequently-asked-questions-container {
+    display: flex;
+    background: #F4F4F4;
+    padding: 25px 80px;
+}
+
+
+.frequently-asked-questions-button {
+    background-color: #FFF;
+    color: #000;
+    border: 1.5px solid #fff;
+    font-size: 17px;
+    padding: 14px 12px;
+    border-radius: 6px;
+    margin: 6px;
+}
+
+.frequently-asked-questions-button:hover {
+    cursor: pointer;
+}
+
+
+.frequently-asked-questions-wrapper {
+    flex: 0.3;
+}
+
+.faqs-accordion-wrapper {
+    flex: 0.7;
+}
+
+.faqs-accordion-question {
+    background: #fff;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    background-image: url("../../images/mlow-market-nav-1/plus.png");
+    background-repeat: no-repeat;
+    background-position: 99% 50%;
+    background-size: 16px;
+}
+
+.faqs-accordion-question.show {
+    background-image: url("../../images/mlow-market-nav-1/minus-sign.png");
+}
+
+
+.faqs-accordion-question p {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.faqs-accordion-answer {
+    background: #fff;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+     display: none;
+}
+
+.faqs-accordion-answer p {
+    margin: 0;
+    color: #666;
+    font-family: Roboto, sans-serif;
+
+}
+
+.faqs-accordion-item {
+    margin: 10px 0;
+    border: 1px solid #ddd;
+
+    /* border-radius: 5px; */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+.faqs-accordion-answer.show {
+    display: block;
+}
+
+.frequently-asked-questions-pera {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.77px;
+    text-align: left;
+}

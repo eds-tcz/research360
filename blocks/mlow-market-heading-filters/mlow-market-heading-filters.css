@@ -1,42 +1,42 @@
-.mlow-market-heading-filters-container{
+.mlow-market-heading-filters-container {
     padding: 0 !important;
 }
 
-.mlow-market-heading-filters-wrapper{
+.mlow-market-heading-filters-wrapper {
     max-width: 1366px !important;
     margin: 16px auto !important;
 }
 
-.filter-ul ul{
+.filter-ul ul {
     list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 8px;
-  align-items: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
 
-.filter-ul li{
+.filter-ul li {
     padding: 1px 8px;
-  border: 1px solid #d1d1d1;
-  border-radius: 24px;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  transition: background-color 0.3s, border-color 0.3s;
+    border: 1px solid #d1d1d1;
+    border-radius: 24px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
-.filter-ul li:first-child{
+.filter-ul li:first-child {
     background-color: #fcaf17;
     font-weight: 500;
 }
 
-.filter-ul li a{
+.filter-ul li a {
     text-decoration: none;
     color: #000;
     font-weight: inherit;
 }
 
-.filter-ul li:hover{
+.filter-ul li:hover {
     border-color: #ffc107;
 }

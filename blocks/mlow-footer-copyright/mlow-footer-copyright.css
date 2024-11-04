@@ -1,4 +1,4 @@
-.mlow-footer-copyright-container{
+.mlow-footer-copyright-container {
     padding: 0 !important;
     height: 44px;
     background-color: #3b3b3b;
@@ -6,10 +6,10 @@
     display: flex;
 }
 
-.mlow-footer-copyright-wrapper{
+.mlow-footer-copyright-wrapper {
     margin: auto;
 }
 
-.footer-copy p{
+.footer-copy p {
     font-size: 14px;
 }

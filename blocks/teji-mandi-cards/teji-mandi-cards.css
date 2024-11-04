@@ -1,0 +1,59 @@
+.teji-mandi-cards
+{
+    display: flex;
+}
+
+/* .teji-image-card
+{
+    display: flex;
+    align-items: center;
+}
+.image-card-image, .image-card-title {
+    margin-right: 10px; 
+  } */
+
+  .teji-card-image, .teji-card-title {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; /* Adjust for desired spacing */
+  }
+
+  .teji-card-image img
+  {
+    object-position: center;
+    border-radius: 50%;
+    padding: 0;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .teji-image-card
+  {
+    border: 1px solid #DDD;
+    width: 35%;
+    border-radius: 8px;
+    margin-right: 1%;
+    padding: 12px;
+  }
+
+  .teji-mandi-cards-wrapper
+  {
+    max-width: 90% !important;
+  }
+
+  .teji-card-date
+  {
+    margin-top: -16px;
+    font-family: Roboto, sans-serif !important;
+    color: #666;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .teji-card-amount, .teji-card-percentage {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; /* Adjust for desired spacing */
+  }
