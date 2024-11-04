@@ -24,7 +24,7 @@
     margin-top: var(--bs-gutter-y);
 }
 
-.progressBar .progress {
+.progressbar .progress {
     height: 8px;
     border-radius: 2px;
     margin-top: .25rem !important;
@@ -85,7 +85,7 @@
 }
 
 /* Progress Bar */
-.progressBar {
+.progresbar {
     margin-bottom: 8px;
 }
 
