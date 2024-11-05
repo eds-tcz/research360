@@ -1,23 +1,28 @@
+/* eslint-disable max-len */
 function loadExternalResources(resources) {
-  return Promise.all(resources.map((resource) => new Promise((resolve, reject) => {
-    let element;
+  return Promise.all(
+    resources.map(
+      (resource) => new Promise((resolve, reject) => {
+        let element;
 
-    if (resource.type === 'script') {
-      element = document.createElement('script');
-      element.src = resource.src;
-      // element.async = true;
-      element.onload = resolve;
-      element.onerror = reject;
-    } else if (resource.type === 'link') {
-      element = document.createElement('link');
-      element.href = resource.href;
-      element.rel = 'stylesheet';
-      element.onload = resolve;
-      element.onerror = reject;
-    }
+        if (resource.type === 'script') {
+          element = document.createElement('script');
+          element.src = resource.src;
+          // element.async = true;
+          element.onload = resolve;
+          element.onerror = reject;
+        } else if (resource.type === 'link') {
+          element = document.createElement('link');
+          element.href = resource.href;
+          element.rel = 'stylesheet';
+          element.onload = resolve;
+          element.onerror = reject;
+        }
 
-    document.head.appendChild(element);
-  })));
+        document.head.appendChild(element);
+      }),
+    ),
+  );
 }
 
 export default function decorate() {
@@ -178,7 +183,10 @@ async function stockanalysisdata() {
                                                     <small>Advance</small>
                                                     <b class="font-caribbeangreen"> ${Math.round(
     total
-                                                        - parseInt(stockanalysis.decline, 10),
+                                                        - parseInt(
+                                                          stockanalysis.decline,
+                                                          10,
+                                                        ),
   )
     .toString()
     .slice(0, 2)}</b>
@@ -233,7 +241,8 @@ async function stockanalysisdata() {
             ? (sectoranalysisoverview.per_change
                                                                       >= 0
               ? '+'
-              : '') + sectoranalysisoverview.per_change
+              : '')
+                                                                      + sectoranalysisoverview.per_change
             : '-';
           return `
                                                             <tr>
@@ -319,7 +328,7 @@ async function stockanalysisdata() {
       ]).then(() => {
         setTimeout(() => {
           try {
-          // eslint-disable-next-line no-undef
+            // eslint-disable-next-line no-undef
             $('.SectorPerformance').owlCarousel({
               loop: false,
               margin: 15,
