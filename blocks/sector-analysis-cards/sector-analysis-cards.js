@@ -5,7 +5,7 @@ function loadExternalResources(resources) {
     if (resource.type === 'script') {
       element = document.createElement('script');
       element.src = resource.src;
-      element.async = true;
+      // element.async = true;
       element.onload = resolve;
       element.onerror = reject;
     } else if (resource.type === 'link') {
@@ -306,32 +306,39 @@ async function stockanalysisdata() {
         type: 'script',
         src: 'https://www.research360.in/dist/js/jquery-3.7.1.min.js',
       },
-      {
-        type: 'script',
-        src: 'https://www.research360.in/dist/js/owl.carousel-min.js',
-      },
-      {
-        type: 'link',
-        href: 'https://www.research360.in/dist/style/carousel.min.css',
-      },
     ]).then(() => {
-      setTimeout(() => {
-        // eslint-disable-next-line no-undef
-        $('.SectorPerformance').owlCarousel({
-          loop: false,
-          margin: 15,
-          autoHeight: true,
-          dots: false,
-          nav: true,
-          responsiveClass: true,
-          responsive: {
-            0: { items: 1 },
-            768: { items: 2 },
-            992: { items: 3 },
-            1200: { items: 3 },
-          },
-        });
-      }, 2000);
+      loadExternalResources([
+        {
+          type: 'script',
+          src: 'https://www.research360.in/dist/js/owl.carousel-min.js',
+        },
+        {
+          type: 'link',
+          href: 'https://www.research360.in/dist/style/carousel.min.css',
+        },
+      ]).then(() => {
+        setTimeout(() => {
+          try {
+          // eslint-disable-next-line no-undef
+            $('.SectorPerformance').owlCarousel({
+              loop: false,
+              margin: 15,
+              autoHeight: true,
+              dots: false,
+              nav: true,
+              responsiveClass: true,
+              responsive: {
+                0: { items: 1 },
+                768: { items: 2 },
+                992: { items: 3 },
+                1200: { items: 3 },
+              },
+            });
+          } catch (error) {
+            console.log(error.message);
+          }
+        }, 2000);
+      });
     });
     // Initialize Owl Carousel
     // eslint-disable-next-line no-undef
