@@ -280,20 +280,21 @@ async function stockanalysisdata() {
     document.querySelector('.sector-analysis-cards').innerHTML = html;
 
     // Initialize Owl Carousel
-    // $('.SectorPerformance').owlCarousel({
-    //     loop: false,
-    //     margin: 15,
-    //     autoHeight: true,
-    //     dots: false,
-    //     nav: true,
-    //     responsiveClass: true,
-    //     responsive: {
-    //         0: { items: 1 },
-    //         768: { items: 2 },
-    //         992: { items: 3 },
-    //         1200: { items: 3 }
-    //     }
-    // });
+    // eslint-disable-next-line no-undef
+    $('.SectorPerformance').owlCarousel({
+      loop: false,
+      margin: 15,
+      autoHeight: true,
+      dots: false,
+      nav: true,
+      responsiveClass: true,
+      responsive: {
+        0: { items: 1 },
+        768: { items: 2 },
+        992: { items: 3 },
+        1200: { items: 3 },
+      },
+    });
   } catch (error) {
     console.error('Error fetching stock analysis data:', error);
   }
