@@ -250,3 +250,20 @@
   border: 1px solid #feae17 !important;
   border-radius: 4px !important;
 }
+
+.owl-nav button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+}
+.owl-nav span {
+  font-size: 32px;
+  line-height: 25px;
+}
+.owl-carousel.owl-theme .owl-nav button.owl-prev.disabled {
+    visibility: hidden;
+}
+.owl-carousel.owl-theme .owl-nav button.owl-next.disabled {
+    visibility: hidden
+}

@@ -138,3 +138,13 @@
   margin: 24px 20px 20px;
   width: 100%;
 }
+
+.market-card-table p {
+  text-align: center;
+}
+
+.mlow-market-status img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
